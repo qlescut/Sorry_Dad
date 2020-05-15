@@ -1,0 +1,28 @@
+p {
+    text-align: justify;
+    font-size: large;
+}
+
+/*DESKTOP AND TABLET*/
+@media (min-width: 993px) {
+     #contenant {
+        margin-left: 2vmax;
+        margin-right: 2vmax;
+    }
+}
+
+/*TABLET AND SMARTPHONE*/
+@media (max-width: 992px) {
+    #contenant {
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: 1fr 8fr 1fr 8fr 1fr;
+    }
+
+    #news {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}

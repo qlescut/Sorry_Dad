@@ -1,0 +1,368 @@
+/*TABLET AND SMARTPHONE*/
+@media (max-width: 992px) {
+    body {
+        background-size: cover;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: 2fr 8fr 1fr;
+    }
+
+    /*HEADER*/
+    .container_header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    #logo {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #logo_1 {
+        width: 22vmax;
+    }
+
+    .container_social_networks {
+        grid-column-start: 6;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        margin-left: 1vmax;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #social_network_1, #social_network_2, #social_network_3, #social_network_4 {
+        font-size: xx-large;
+        margin-left: 2vmax;
+    }
+
+    #social_network_1, #social_network_2, #social_network_3, #social_network_4 {
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #social_network_1 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    #social_network_2 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+
+    #social_network_3 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+    }
+
+    #social_network_4 {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        margin-right: 0.99vmax;
+    }
+
+    /*CONTENANT*/
+    .container_contenant {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        overflow-y: scroll;
+        height: 72.5vmax;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    #title_contenant {
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    /*MENU*/
+    .container_footer {
+        display: none;
+    }
+
+    #menu_responsive {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        opacity: 85%;
+        text-align: left;
+    }
+
+    h3, h4 {
+        font-weight: bold;
+        color: white;
+        font-family: 'Calibri', cursive;
+        outline: 0;
+    }
+
+    @keyframes checked-anim {
+        100% {
+            width: 40%;
+            height: 100%;
+        }
+    }
+
+    li, a {
+        display: none;
+    }
+
+    li {
+        text-indent: 1vmax;
+    }
+
+    #tab_1 {
+        margin-top: 10vmax;
+    }
+
+    a:focus {
+        display: block;
+        background-color: rgb(64, 64, 64);
+    }
+
+    #trigger, #burger, #burger:before, #burger:after {
+        position: absolute;
+        top: 3.1vmax;
+        left: 3.1vmax;
+        background: white;
+        width: 4vmax;
+        height: 0.75vmax;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    #trigger {
+        background: none;
+    }
+
+    #burger:before {
+        content: " ";
+        top: 10px;
+        left: 0;
+    }
+
+    #burger:after {
+        content: " ";
+        top: 20px;
+        left: 0;
+    }
+
+    #menu-toggle:checked + #trigger + #burger {
+        top: 35px;
+        transform: rotate(180deg);
+        transition: transform 0.2s ease;
+    }
+
+    #menu-toggle:checked + #trigger + #burger:before {
+        width: 3vmax;
+        top: -0.4vmax;
+        left: 2.5vmax;
+        transform: rotate(45deg) translateX(-5px);
+        transition: transform 0.2s ease;
+    }
+
+    #menu-toggle:checked + #trigger + #burger:after {
+        width: 3vmax;
+        top: 0.4vmax;
+        left: 2.5vmax;
+        transform: rotate(-45deg) translateX(-5px);
+        transition: transform 0.2s ease;
+    }
+
+    #menu {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 10vmax;
+        height: 10vmax;
+        background-color: rgb(64, 64, 64);
+    }
+
+    #menu-toggle:checked + #trigger + #burger + #menu {
+        animation: checked-anim 0.5s ease both;
+    }
+
+    #menu-toggle:checked + #trigger ~ #menu > li, a {
+        display: block;
+    }
+
+    [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        display: none;
+    }
+}
+
+/*TABLET*/
+@media (max-width: 992px) and (min-width: 769px) {
+    /*HEADER*/
+    #logo {
+        grid-column-start: 3;
+        grid-column-end: 6;
+    }
+
+    /*CONTENANT*/
+    .container_contenant {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        overflow-y: scroll;
+        height: 72.5vmax;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    #title_contenant {
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    /*MENU*/
+    .container_footer {
+        display: none;
+    }
+
+    #menu_responsive {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        opacity: 85%;
+        text-align: left;
+    }
+
+    h3, h4 {
+        font-size: x-large;
+        font-weight: bold;
+        color: white;
+        font-family: 'Calibri', cursive;
+        outline: 0;
+    }
+
+    @keyframes checked-anim {
+        100% {
+            width: 25%;
+            height: 100%;
+        }
+    }
+
+    li, a {
+        display: none;
+    }
+
+    li {
+        text-indent: 1vmax;
+    }
+
+    #tab_1 {
+        margin-top: 10vmax;
+    }
+
+    a:focus {
+        display: block;
+        background-color: rgb(64, 64, 64);
+    }
+
+    #trigger, #burger, #burger:before, #burger:after {
+        position: absolute;
+        top: 3.1vmax;
+        left: 3.1vmax;
+        background: white;
+        width: 4vmax;
+        height: 0.75vmax;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    #trigger {
+        background: none;
+    }
+
+    #burger:before {
+        content: " ";
+        top: 10px;
+        left: 0;
+    }
+
+    #burger:after {
+        content: " ";
+        top: 20px;
+        left: 0;
+    }
+
+    #menu-toggle:checked + #trigger + #burger {
+        top: 35px;
+        transform: rotate(180deg);
+        transition: transform 0.2s ease;
+    }
+
+    #menu-toggle:checked + #trigger + #burger:before {
+        width: 3vmax;
+        top: -0.4vmax;
+        left: 2.5vmax;
+        transform: rotate(45deg) translateX(-5px);
+        transition: transform 0.2s ease;
+    }
+
+    #menu-toggle:checked + #trigger + #burger:after {
+        width: 3vmax;
+        top: 0.4vmax;
+        left: 2.5vmax;
+        transform: rotate(-45deg) translateX(-5px);
+        transition: transform 0.2s ease;
+    }
+
+    #menu {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 10vmax;
+        height: 10vmax;
+        background-color: rgb(64, 64, 64);
+    }
+
+    #menu-toggle:checked + #trigger + #burger + #menu {
+        animation: checked-anim 0.5s ease both;
+    }
+
+    #menu-toggle:checked + #trigger ~ #menu > li, a {
+        display: block;
+    }
+
+    [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    body {
+        background-image: url("../img/fondtattoo_tablet.jpg");
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url("../img/fondtattoo_smart.jpg");
+    }
+}

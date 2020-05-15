@@ -1,0 +1,62 @@
+p {
+    text-align: justify;
+}
+
+#img {
+    background-image: url("../img/tatoueuse.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+/*DESKTOP AND TABLET*/
+@media (min-width: 993px) {
+    #contenant {
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr 7fr 1fr;
+        grid-template-rows: 1fr 4fr 1fr 1fr;
+    }
+
+    p {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+
+    #img {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+}
+
+/*TABLET*/
+@media (max-width: 993px) and (min-width: 769px) {
+    #contenant {
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-template-rows: 3fr 4fr;
+    }
+
+    p {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #img {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+}

@@ -1,0 +1,12 @@
+#logo {
+    opacity: 0;
+}
+
+#container_contenant {
+    background: transparent;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 85%;
+}

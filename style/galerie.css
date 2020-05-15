@@ -1,0 +1,245 @@
+/*GALERIE*/
+#picture_tatoo_1, #picture_tatoo_2, #picture_tatoo_3, #picture_tatoo_4, #picture_tatoo_5, #picture_tatoo_6 {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.lightbox-target {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+    top: -100%;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    overflow: hidden;
+}
+
+.lightbox-target img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 0;
+    max-width: 0;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+a.lightbox-close {
+    display: block;
+    box-sizing: border-box;
+    background: rgba(64, 64, 64, 0.85);
+    text-decoration: none;
+    position: absolute;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+a.lightbox-close:before {
+    content: "";
+    display: block;
+    background: white;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+a.lightbox-close:after {
+    content: "";
+    display: block;
+    background: white;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.lightbox-target:target {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+}
+
+.lightbox-target:target img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+    top: 0;
+}
+
+
+/*DESKTOP AND TABLET*/
+@media (min-width: 993px) {
+    /*GALERIE*/
+    #picture_tatoo_1, #picture_tatoo_2, #picture_tatoo_3, #picture_tatoo_4, #picture_tatoo_5, #picture_tatoo_6 {
+        height: 14vmax;
+        width: 17vmax;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    #galerie {
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr 6fr 1fr 6fr 1fr;
+        grid-template-rows: 1fr 4fr 1fr 4fr 1fr;
+    }
+
+    #picture_contenant_1 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #picture_contenant_2 {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #picture_contenant_3 {
+        grid-column-start: 6;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #picture_contenant_4 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #picture_contenant_5 {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #picture_contenant_6 {
+        grid-column-start: 6;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    a.lightbox-close {
+        width: 50px;
+        height: 50px;
+        top: -80px;
+        right: 0;
+    }
+
+    a.lightbox-close:before {
+        height: 30px;
+        width: 1px;
+        left: 26px;
+        top: 10px;
+    }
+
+    a.lightbox-close:after {
+        height: 30px;
+        width: 1px;
+        left: 26px;
+        top: 10px;
+    }
+}
+
+
+/*TABLET AND SMARTPHONE*/
+@media (max-width: 992px) {
+    /*GALERIE*/
+    #picture_tatoo_1, #picture_tatoo_2, #picture_tatoo_3, #picture_tatoo_4, #picture_tatoo_5, #picture_tatoo_6 {
+        height: 17vmax;
+        width: 20vmax;
+    }
+
+    #galerie {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
+        grid-template-rows: 1fr 6fr 1fr 6fr 1fr 6fr 1fr;
+    }
+
+    #picture_contenant_1 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #picture_contenant_2 {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #picture_contenant_3 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #picture_contenant_4 {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #picture_contenant_5 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    #picture_contenant_6 {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    a.lightbox-close {
+        width: 50px;
+        height: 50px;
+        top: -80px;
+        right: 0;
+    }
+
+    a.lightbox-close:before {
+        height: 30px;
+        width: 1px;
+        left: 26px;
+        top: 10px;
+    }
+
+    a.lightbox-close:after {
+        height: 30px;
+        width: 1px;
+        left: 26px;
+        top: 10px;
+    }
+}

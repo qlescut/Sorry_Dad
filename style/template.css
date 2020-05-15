@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: rgba(250, 250, 250, 0.85);
+    font-family: 'Calibri', cursive;
+    overflow-y: hidden;
+}
+
+p {
+    font-size: x-large;
+}
+
+
+/*HEADER*/
+#logo {
+    text-align: center;
+}
+
+#social_network_1, #social_network_2, #social_network_3, #social_network_4 {
+    color: rgb(64, 64, 64);
+    opacity: 99%;
+}
+
+
+/*CONTENANT*/
+.container_contenant {
+    background: rgba(64, 64, 64, 0.85);
+    width: 100%;
+}
+
+label {
+    font-size: x-large;
+    text-align: center;
+}
+
+button {
+    color: rgb(64, 64, 64);
+    font-family: 'Calibri', cursive;
+    font-weight: bold;
+}
+
+
+/*FOOTER*/
+.container_footer {
+    background: rgb(64, 64, 64);
+    background: linear-gradient(0deg, rgba(64, 64, 64, 1) 0%, rgba(80, 80, 80, 1) 92.5%, rgba(0, 0, 0, 0) 100%);
+    opacity: 99%;
+    text-align: justify;
+}
+
+.tabs, .tabs_2 {
+    text-decoration: none;
+    color: white;
+}
+
+h4 {
+    font-size: medium;
+    font-weight: normal;
+    text-align: justify;
+}
+
+
+/*ANIMATIONS*/
+.tabs:hover, .tabs_2:hover {
+    color: silver;
+}
